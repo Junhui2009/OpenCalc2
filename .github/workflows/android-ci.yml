@@ -24,4 +24,4 @@ jobs:
         distribution: 'temurin'
 
     - name: Run Gradle build
-      run: ./gradlew build
+      run: ./gradlew build --debug
