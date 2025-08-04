@@ -10,7 +10,6 @@ android {
 
     defaultConfig {
         applicationId = "com.darkempire78.opencalculator"
-        resourceConfigurations += listOf("ar", "az", "be", "bn", "bs", "cs", "de", "el", "es", "fa", "fr", "hi", "hr", "hu", "in", "it", "ja", "kn", "mk", "ml", "nb-rNO", "nl", "or", "pl", "pt-rBR[...]")
         minSdk = 21
         targetSdk = 34
         versionCode = 53
@@ -42,6 +41,37 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+    }
+
+    androidResources {
+        // 使用新的 localeFilters 替代已弃用的 resourceConfigurations
+        localeFilters.addAll(listOf(
+            "ar",    // Arabic
+            "az",    // Azerbaijani
+            "be",    // Belarusian
+            "bn",    // Bengali
+            "bs",    // Bosnian
+            "cs",    // Czech
+            "de",    // German
+            "el",    // Greek
+            "es",    // Spanish
+            "fa",    // Persian
+            "fr",    // French
+            "hi",    // Hindi
+            "hr",    // Croatian
+            "hu",    // Hungarian
+            "in",    // Indonesian (注意：正确的代码是 "id")
+            "it",    // Italian
+            "ja",    // Japanese
+            "kn",    // Kannada
+            "mk",    // Macedonian
+            "ml",    // Malayalam
+            "nb",    // Norwegian Bokmål (移除地区限定 -rNO)
+            "nl",    // Dutch
+            "or",    // Odia
+            "pl",    // Polish
+            "pt-rBR" // Portuguese (Brazil) - 注意格式
+        ))
     }
 
     compileOptions {
